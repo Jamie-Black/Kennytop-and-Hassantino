@@ -43,8 +43,8 @@
         <h1 id="heroTitle">Timeless Elegance</h1>
         <p id="heroDesc">Discover luxury watches designed for sophistication and style.</p>
         <div class="hero-actions">
-          <a href="#collection" class="btn">Explore Collection</a>
-          <button class="btn-order" onclick="openForm('Golden Elite')">Order Now</button>
+          <a href="#collection" class="btn">Collection</a>
+          <button class="btn" onclick="openForm('Golden Elite')">Order Now</button>
         </div>
       </div>
     </section>
@@ -56,6 +56,7 @@
       <source src="./VID-20250901-WA0007.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+    <button class="btn-order" onclick="openForm('Golden Elite')">Order Now</button>
   </div>
 </section>
 
@@ -108,7 +109,7 @@
       </p>
       <p>Whether for everyday wear or special occasions, our watches are more than accessories — they’re expressions of class.
       </p>
-                   <button class="btn-order" onclick="openForm('Golden Elite')">Order Now</button>
+      <button class="btn-order" onclick="openForm('Golden Elite')">Order Now</button>
     </div>
     <div class="about-image">
       <img src="./images (15).jpeg" alt="Luxury Watch Showcase">
@@ -144,6 +145,7 @@
       </div>
     </div>
   </div>
+  <button class="btn-order" onclick="openForm('Golden Elite')">Order Now</button>
 </section>
     <!-- important notice section-->
     <div class="notice-container">
@@ -195,6 +197,7 @@
       <input type="email" name="reply_to" placeholder="Your Email" required>
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit" class="btn">Send Message</button>
+      <button class="btn-order" onclick="openForm('Golden Elite')">Order Now</button>
     </form>
   </div>
   <div class="social-icons">
@@ -226,7 +229,8 @@
     <form id="orderFormSubmit">
       <input type="text" id="customerName" placeholder="Your Full Name" required>
       <input type="email" id="customerEmail" placeholder="Your Email" required>
-      <input type="tel" name="customerNumber" id="customerNumber" placeholder="Your Phone number" required>
+      <input type="tel" name="customerNumber" id="customerNumber" placeholder="Your 1st Phone number" required>
+      <input type="tel" name="customerNumber2" id="customerNumber2" placeholder="Your 2nd Phone number " required>  
       <input type="text" id="customerAddress" placeholder="Your Address" required>
       <input type="hidden" id="watchName"> <!-- auto-filled -->
       <button type="submit" class="btn-cta">Submit</button>
