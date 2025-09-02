@@ -169,7 +169,7 @@ document.getElementById("orderFormSubmit").addEventListener("submit", function(e
   let address = document.getElementById("customerAddress").value;
   let product = document.getElementById("watchName").value;
 
-  let message = `Hello, I want to order:\n\n📌 Product: ${product}\n👤 Name: ${name}\n📞 Phone: ${phone}\n📧 📞 Phone 2: ${phone2}\n📧 Email: ${email}\n🏠 Address: ${address}`;
+  let message = `Hello, I want to order:\n\n📌 Product: ${product}\n👤 Name: ${name}\n📞 Phone: ${phone}\n 📞 Phone 2: ${phone2}\n📧 Email: ${email}\n🏠 Address: ${address}`;
   
   let whatsappNumber = "+234818793 4334"; // 👉 Replace with your WhatsApp number
   let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
