@@ -96,6 +96,7 @@ display: inline-block;
   background: var(--accent); /* WhatsApp green */
   color: #fff;
   font-weight: bold;
+  font-size:12px;
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.3s ease;
