@@ -1,217 +1,205 @@
-<!DOCtype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kennytop &amp; Hassantino</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patek Philippe Collection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+    header {
+      background: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      width: 90%;
+      margin: auto;
+      padding: 20px 0;
+    }
+    .video-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+    video {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .btn-order {
+      background: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .btn-order:hover {
+      background: crimson;
+    }
+    .form-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .form-container input[type=text], 
+    .form-container input[type=number] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-container .btn {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      border-radius: 5px;
+    }
+    .form-container .btn:hover {
+      background-color: crimson;
+    }
+    .form-container .cancel {
+      background-color: red;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header / Navbar -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <button id="menuBtn"
-              class="menu-btn"
-              aria-label="Open menu"
-              aria-controls="primaryNav"
-              aria-expanded="false">
-        <span class="hamb" aria-hidden="true"></span>
-      </button>
-
-      <div class="logo">Kennytop &amp; Hassantino</div>
-
-      <nav id="primaryNav" class="primary-nav" aria-hidden="true">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#collection">Collection</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <header>
+    <h1>Patek Philippe Collection</h1>
+    <p>Exclusive luxury watches</p>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="slide active" style="background-image:url('./20250901_191633.jpg');" data-title="Timeless Elegance" data-desc="At Kennytop & Hassantino, we believe a watch is more than just a timekeeper — it’s a statement of class, precision, and style. Our collection brings together timeless elegance and modern sophistication."></div>
-      <div class="slide" style="background-image:url('./20250901_191633.jpg');" data-title="Precision Craft" data-desc="Explore our premium range of watches that combine durability, beauty, and precision — because the right watch doesn’t just tell time, it tells your story."></div>
-      <div class="slide" style="background-image:url('./20250901_191633.jpg');" data-title="Statement Pieces" data-desc="Discover the perfect blend of craftsmanship and design. From bold chronographs to refined classics, each piece in our collection is carefully curated to match your lifestyle and personality"></div>
+  <div class="container">
 
-      <div class="hero-content">
-        <h1 id="heroTitle">Timeless Elegance</h1>
-        <p id="heroDesc">Discover luxury watches designed for sophistication and style.</p>
-        <div class="hero-actions">
-          <a style="font-size:14px; background-color:white; color:crimson;" href="#collection" class="btn">Collection</a>
-          <button style="font-size:14px; border:2px solid crimson;" class="btn" onclick="openForm('Golden Elite')">Order Now</button>
-        </div>
-      </div>
-    </section>
-    
-    <section class="why-choose-us" id="why">
-  <h2>Why Choose Us</h2>
-  <p>At KennyTop and Hassantino, we are committed to excellence, innovation, and trust. Our team blends expertise with creativity to deliver solutions tailored to your unique needs. We prioritize quality, reliability, and customer satisfaction—ensuring every order reflects our dedication to outstanding results. Choosing us means choosing a partner who values your vision and works tirelessly to bring it to life.</p>
-  <div class="video-container">
-    <video autoplay muted loop playsinline>
-      <source src="./VID-20250901-WA0007.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <p class="price">&#8358;50,000</p>
-    <button class="btn-order" onclick="openForm('Patek Philippe collection')">Order Now</button>
-  </div>
-</section> 
-          
-    <!-- Collection -->
-    <section class="collection" id="collection">
-      <div class="container">
-        <h2 class="section-title">Our Collection</h2>
-        <p class="section-sub">Handpicked watches for every style.</p>
-        <div class="grid">
-          <article class="card">
-          <div class="video-container">
-          <video autoplay muted loop playsinline>
-             <source src="./VID-20250902-WA0011.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-           </video>
-          </div>
-            <p class="price">&#8358;90,000</p>
-            <h4>Experience the pinnacle of luxury with this exquisite Patek Philippe Nautilus.</h4>
-              <button class="btn-order" onclick="openForm('Patek Philippe Nautilus')">Order Now</button>
-         </article>
-
-          <article class="card">
-        <div class="video-container">
-          <video autoplay muted loop playsinline>
-             <source src="./VID-20250902-WA0013.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-          </video>
-              </div>  
-            <p class="price">&#8358;45,000</p>
-            <h4>Elevate your style with this striking Patek Philippe collection.</h4>
-            <button class="btn-order" onclick="openForm('Patek Philippe watch')">Order Now</button>
-          </article>
-          
-          <article class="card">
-         <div class="video-container">
-          <video autoplay muted loop playsinline>
-             <source src="./VID-20250902-WA0014.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-          </video>
-         </div>
-            <p class="price">&#8358;150,000</p>
-            <h4>Luxurious design for glowing and shining personalities.</h4>
-             <button class="btn-order" onclick="openForm('Glowing Patek Philippe')">Order Now</button>
-          </article>   
+    <section class="why-choose-us">
+      <h2>Why Choose Us?</h2>
+      <div class="video-container">
+        <video autoplay muted loop playsinline>
+          <source src="./VID-20250901-WA0007.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="price">&#8358;50,000</p>
+        <button class="btn-order" onclick="openForm('Patek Philippe collection')">Order Now</button>
       </div>
     </section>
 
-    
-    <section id="about" class="about-section">
-  <div class="about-container">
-    <div class="about-text">
-      <h2>About Kennytop &amp; Hassantino</h2>
-      <p><strong> <span style="color: crimson;">Kennytop &amp; Hassantino</span></strong> is your trusted source for timeless luxury watches. We curate and sell premium collections that blend elegance, style, and durability — crafted for those who value bold statements and refined taste.
-      </p>
-      <p>Whether for everyday wear or special occasions, our watches are more than accessories — they’re expressions of class.
-      </p>
-      <button class="btn-order" onclick="openForm('Golden Elite')">Order Now</button>
-    </div>
-    <div class="about-image">
-      <img src="./images (15).jpeg" alt="Luxury Watch Showcase">
-    </div>
+    <section class="collection">
+      <div class="video-container">
+        <video class="autoplay-video" autoplay muted loop playsinline>
+          <source src="./VID-20250902-WA0011.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="price">&#8358;90,000</p>
+      <h4>Experience the pinnacle of luxury with this exquisite Patek Philippe Nautilus.</h4>
+      <button class="btn-order" onclick="openForm('Patek Philippe Nautilus')">Order Now</button>
+    </section>
+
+    <section class="collection">
+      <div class="video-container">
+        <video class="autoplay-video" autoplay muted loop playsinline>
+          <source src="./VID-20250902-WA0013.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="price">&#8358;45,000</p>
+      <h4>Elevate your style with this striking Patek Philippe collection.</h4>
+      <button class="btn-order" onclick="openForm('Patek Philippe watch')">Order Now</button>
+    </section>
+
+    <section class="collection">
+      <div class="video-container">
+        <video class="autoplay-video" autoplay muted loop playsinline>
+          <source src="./VID-20250902-WA0014.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="price">&#8358;150,000</p>
+      <h4>Luxurious design for glowing and shining personalities.</h4>
+      <button class="btn-order" onclick="openForm('Glowing Patek Philippe')">Order Now</button>
+    </section>
+
   </div>
 
-  <!-- Brand Timeline -->
-  <div class="timeline">
-    <h3>Our values</h3>
-    <div class="timeline-container">
-      <div class="timeline-item">
-        <span class="year">✅ Fast Delivery</span>
-      </div>
-      
-      <div class="timeline-item">
-        <span class="year">🏆 Top-rated Service</span>
-      </div>
-      
-      <div class="timeline-item">
-        <span class="year">⭐ Premium Quality</span>
-      </div>      
-      <div class="timeline-item">
-        <span class="year">💯 Customer Satisfaction</span>
-      </div>
-      <div class="timeline-item">
-        <span class="year">📌 Affordable Luxury
-      </div>
-      <div class="timeline-item">
-        <span class="year">🛡 Warranty Guaranteed</span>
-      </div>
-      <div class="timeline-item">
-        <span class="year">🤝 Trusted Brand</span>
-      </div>
-    </div>
-  </div>
-  <button class="btn-order" onclick="openForm('Golden Elite')">Order Now</button>
-</section>
-    <!-- important notice section-->
-    <div class="notice-container">
-        <h2 class="notice-header">Important Notice</h2>
-        <div class="notice-item">
-            <p>If you are not <span class="bold-text">fully committed</span> to making a purchase, please do not proceed with your order. We want to ensure our products get to those who truly want them.</p>
-        </div>
-        <div class="notice-item">
-            <p>Please ensure your contact and delivery information are <span class="bold-text">accurate and complete</span> to avoid any delays. We will not be responsible for issues arising from incorrect details.</p>
-        </div>
-        <div class="notice-item">
-            <p>If you anticipate being <span class="bold-text">unavailable</span> at the time of delivery, kindly notify us in advance. We spend resources on every shipment, and a missed delivery impacts us.</p>
-        </div>
-        <div class="notice-item">
-            <p>We value every customer, but we kindly ask that you only order when you are <span class="bold-text">financially ready</span>. Let's make this a smooth process for everyone.</p>
-        </div>
-        <br>
-        <button class="btn-order" onclick="openForm('Golden Elite')">Order Now</button>
-    </div>
+  <div class="form-popup" id="orderForm">
+    <form action="https://formspree.io/f/movqgpkb" method="POST" class="form-container">
+      <h2>Order Form</h2>
 
-<section id="reviews" class="reviews">
-  <h2 class="section-title">What Our Clients Say</h2>
-  <div class="review-carousel">
-    <div class="review-slide active">
-      <img src="./IMG-20250901-WA0040.jpg" alt="Client Review 1">
-    </div>
-    <div class="review-slide">
-      <img src="./IMG-20250901-WA0042.jpg" alt="Client Review 2">
-    </div>
-    <div class="review-slide">
-      <img src="./IMG-20250901-WA0043.jpg" alt="Client Review 3">
-    </div>
-        <div class="review-slide">
-      <img src="./IMG-20250901-WA0044.jpg" alt="Client Review 4">
-    </div>
-  </div>
+      <label for="product"><b>Product</b></label>
+      <input type="text" id="product" name="product" readonly>
 
-  <div class="review-indicators">
-    <span class="dot active"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-</section>
+      <label for="name"><b>Name</b></label>
+      <input type="text" placeholder="Enter your name" name="name" required>
 
-<section id="contact" class="contact-section">
-  <div class="contact-container">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you. Fill the form or connect with us on social media.</p>
-    <form id="contact-form" class="contact-form">
-      <input type="text" name="from_name" placeholder="Your Name" required>
-      <input type="email" name="reply_to" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-      <button class="btn-order" onclick="openForm('Golden Elite')">Order Now</button>
+      <label for="number"><b>Phone Number</b></label>
+      <input type="number" placeholder="Enter your number" name="number" required>
+
+      <button type="submit" class="btn">Submit</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
   </div>
-  <div class="social-icons">
-    <h3>For more information, Reach Us on</h3>
-  <!-- Phone numbers -->
-  <a href="tel:+2347061787074" title="Call Phone 1"><i class="fas fa-phone"></i> +2347061787074</a>
+
+  <script>
+    function openForm(productName) {
+      document.getElementById("orderForm").style.display = "block";
+      document.getElementById("product").value = productName;
+    }
+
+    function closeForm() {
+      document.getElementById("orderForm").style.display = "none";
+    }
+
+    // Handle first video in .why-choose-us
+    const whyChooseVideo = document.querySelector(".why-choose-us video");
+    const observer1 = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          whyChooseVideo.play();
+        } else {
+          whyChooseVideo.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+    observer1.observe(whyChooseVideo);
+
+    // Handle other autoplay videos
+    const videos = document.querySelectorAll(".autoplay-video");
+    const observer2 = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.play();
+        } else {
+          entry.target.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+    videos.forEach(video => {
+      observer2.observe(video);
+    });
+  </script>
+</body>
+  </html>ass="fas fa-phone"></i> +2347061787074</a>
   <a href="tel:+2349136057399" title="Call Phone 2"><i class="fas fa-phone"></i> +2349136057399</a>
   
   <!-- Instagram links -->
