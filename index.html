@@ -59,7 +59,7 @@
   <p>At KennyTop and Hassantino, we are committed to excellence, innovation, and trust. Our team blends expertise with creativity to deliver solutions tailored to your unique needs. We prioritize quality, reliability, and customer satisfaction—ensuring every order reflects our dedication to outstanding results. Choosing us means choosing a partner who values your vision and works tirelessly to bring it to life.</p>
   <br>
       <div class="video-container">
-    <video autoplay muted loop playsinline preload="auto">
+    <video class="video-container" autoplay muted loop playsinline preload="auto">
       <source src="./VID-20250901-WA0007.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -77,7 +77,7 @@
         <div class="grid">
           <article class="card">
           <div class="video-container">
-          <video autoplay muted loop playsinline preload="auto">
+          <video class="video-container" autoplay muted loop playsinline preload="auto">
              <source src="./VID-20250902-WA0011.mp4" type="video/mp4">
       Your browser does not support the video tag.
            </video>
@@ -90,7 +90,7 @@
 
           <article class="card">
         <div class="video-container">
-          <video autoplay muted loop playsinline preload="auto">
+          <video class="autoplay-video" autoplay muted loop playsinline preload="auto">
              <source src="./VID-20250902-WA0013.mp4" type="video/mp4">
       Your browser does not support the video tag.
           </video>
@@ -103,7 +103,7 @@
           
           <article class="card">
          <div class="video-container">
-          <video autoplay muted loop playsinline preload="auto">
+          <video class="video-container" autoplay muted loop playsinline preload="auto">
              <source src="./VID-20250902-WA0014.mp4" type="video/mp4">
       Your browser does not support the video tag.
           </video>
@@ -256,21 +256,20 @@
     <button onclick="closeForm()" class="btn-order-cancel">Cancel</button>
   </div>
 </div>
-<script>
-  
+
+  <!--autoplay script-->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const video = document.querySelector(".why-choose-us-video");
-
-  // Make sure Safari allows autoplay
-  video.muted = true;
-  video.playsInline = true;
+  const videos = document.querySelectorAll(".autoplay-video");
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+      const video = entry.target;
       if (entry.isIntersecting) {
-        video.play().catch(err => {
-          // Handle Safari autoplay restrictions
+        video.muted = true;
+        video.playsInline = true;
+
+      video.play().catch(err => {
           console.log("Autoplay blocked:", err);
         });
       } else {
@@ -279,30 +278,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, { threshold: 0.5 });
 
-  observer.observe(video);
+  videos.forEach(video => observer.observe(video));
 });
 </script>
-</script>
-    <script>
-    // IntersectionObserver for multiple videos
-    const videos = document.querySelectorAll(".autoplay-video");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const video = entry.target;
-          if (entry.isIntersecting) {
-            video.play();
-          } else {
-            video.pause();
-          }
-        });
-      },
-      { threshold: 0.5 } // 50% of video should be visible to play
-    );
-
-    videos.forEach((video) => observer.observe(video));
-    </script>
+  
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script src="script.js" defer></script>
 </body>
