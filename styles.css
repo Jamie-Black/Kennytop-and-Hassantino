@@ -81,7 +81,7 @@ main { padding-top: var(--header-h); }
 .slide.active{ opacity:1; }
 .hero-content{
   position:relative; z-index:5; padding:2rem; max-width:720px;
-  background:linear-gradient(90deg, rgba(0,0,0,.6) 0%, transparent 60%); color:var(--txt-dark);
+  background:white; color:var(--txt-dark);
   display:flex; flex-direction:column; gap:.75rem; height:100%; justify-content:center;
 }
 body.light .hero-content{ background:linear-gradient(90deg, rgba(255,255,255,.85) 0%, transparent 60%); color:var(--txt-light); }
