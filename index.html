@@ -10,6 +10,38 @@
     .watch-name {
       font-size:16px;
     }
+    .glow-bounce-button {
+  background-color: #DC143C; /* crimson */
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+  animation: glow 2s infinite, bounce 1s infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(220, 20, 60, 1.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+    }
+    
   </style>
 </head>
 <body>
@@ -45,7 +77,7 @@
     <section class="hero" id="home">
       <div>
         <img src="" alt="landing image">
-        <button style="font-size:14px; border:2px solid crimson;" class="btn" onclick="openForm('Kennyto and Hassantino collection')">Order Now</button>
+        <button style="font-size:14px; border:2px solid crimson;" class="glow-bounce-button" onclick="openForm('Kennyto and Hassantino collection')">Order Now</button>
       </div>
       <div class="slide active" style="background-image:url('./20250901_191633.jpg');" data-title="Timeless Elegance" data-desc="At Kennytop & Hassantino, we believe a watch is more than just a timekeeper — it’s a statement of class, precision, and style. Our collection brings together timeless elegance and modern sophistication."></div>
       <div class="slide" style="background-image:url('./20250901_191633.jpg');" data-title="Precision Craft" data-desc="Explore our premium range of watches that combine durability, beauty, and precision — because the right watch doesn’t just tell time, it tells your story."></div>
