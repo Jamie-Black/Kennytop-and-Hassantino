@@ -1,7 +1,7 @@
 :root{
-  --bg-dark:#f9f9f9;
+  --bg-dark:black;
   --card-dark:#141416;
-  --txt-dark:#111111;
+  --txt-dark:white;
   --bg-light:#f9f9f9;
   --card-light:#ffffff;
   --txt-light:#111111;
