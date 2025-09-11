@@ -379,12 +379,14 @@ body.light .modal-content { background: var(--card-light); color: var(--txt-ligh
 .timeline {
   margin-top: 60px;
   text-align: center;
+  color:black;
 }
 
 .timeline h3 {
   font-size: 1.8rem;
   margin-bottom: 40px;
   font-weight: bold;
+  color:black;
 }
 
 .timeline-container {
@@ -431,7 +433,7 @@ body.light .modal-content { background: var(--card-light); color: var(--txt-ligh
   font-weight: bold;
   display: block;
   margin-bottom: 8px;
-  color: white;
+  color: black;
   font-size: 1.2rem;
 }
 
