@@ -76,7 +76,7 @@ body.light .primary-nav a:hover{ background:rgba(0,0,0,.03); }
 main { padding-top: var(--header-h); }
 
 /* Hero */
-.hero{ height:calc(100vh - var(--header-h)); position:relative; overflow:hidden; display:block; }
+.hero{ height:calc(60vh - var(--header-h)); position:relative; overflow:hidden; display:block; }
 .slide{ position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity 1s ease; will-change:opacity; }
 .slide.active{ opacity:1; }
 .hero-content{
