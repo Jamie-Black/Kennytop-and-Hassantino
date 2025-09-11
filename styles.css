@@ -302,8 +302,8 @@ body.light .modal-content { background: var(--card-light); color: var(--txt-ligh
 /* About Section */
 .about-section {
   padding: 80px 20px;
-  background: var(--bg-color);
-  color: var(--text-color);
+  background-color: white;
+  color: black;
 }
 
 .about-container {
