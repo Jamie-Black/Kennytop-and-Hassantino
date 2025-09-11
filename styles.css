@@ -90,7 +90,7 @@ body.light .hero-content{ background-color:white; color:var(--txt-light); }
 .hero-content p{ margin:0 0 1rem; font-size:1.05rem; color:inherit; opacity:.95; }
 
 .btn {
-display: inline-block;
+  display: inline-block;
   margin-top: 10px;
   padding: 10px 16px;
   background: var(--accent); /* WhatsApp green */
@@ -105,8 +105,8 @@ display: inline-block;
 .why-choose-us {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: var(--background);
-  color: var(--text);
+  background-color: white;
+  color: black;
 }
 
 .why-choose-us h2 {
